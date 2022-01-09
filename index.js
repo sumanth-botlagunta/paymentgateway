@@ -120,9 +120,9 @@ app.post("/callback", (req, res) => {
            var _results = JSON.parse(response);
              if(_results.STATUS == 'TXN_SUCCESS') {
                 console.log("^^^^^^^",_results)
-                res.redirect(`http://localhost:3000/vieworder?status=${_results.STATUS}&ORDERID=${_results.ORDERID}&date=${_results.TXNDATE}&bank=${_results.BANKNAME}`)
+                res.redirect(`https://zomatosuman.herokuapp.com/vieworder?status=${_results.STATUS}&ORDERID=${_results.ORDERID}&date=${_results.TXNDATE}&bank=${_results.BANKNAME}`)
              }else {
-              res.redirect(`http://localhost:3000/Paymentfail`)
+              res.redirect(`https://zomatosuman.herokuapp.com/Paymentfail`)
              }
            });
        });
