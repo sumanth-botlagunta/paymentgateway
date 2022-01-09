@@ -39,7 +39,7 @@ if(!paymentDetails.amount || !paymentDetails.customerId || !paymentDetails.custo
     params['CUST_ID'] = paymentDetails.customerId;
     params['TXN_AMOUNT'] = paymentDetails.amount;
     // change port number
-    params['CALLBACK_URL'] = 'http://localhost:4000/callback';
+    params['CALLBACK_URL'] = 'https://zomatopay.herokuapp.com/callback';
     params['EMAIL'] = paymentDetails.customerEmail;
     params['MOBILE_NO'] = paymentDetails.customerPhone;
 
